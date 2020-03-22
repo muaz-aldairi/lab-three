@@ -1,5 +1,7 @@
-const mark=66;
-switch (mark) {
+
+// way one
+const mark1=66;
+switch (mark1) {
     case 100 :
     case 99:
     case 98:
@@ -124,4 +126,61 @@ switch (mark) {
         default:
           console.log(' use numbers from 0 to 100');
       }
+
+// way two
+
+const mark= -101;
+let grade;
+
+if (100<mark) { console.log("unvalid number");}
+else if (0>mark) { console.log("unvalid number");}
+else if (mark>=75) { grade=1;}
+else if (mark>=60) { grade=2;}
+else if (mark>=50) {  grade=3;}
+else { grade=4;}
+
+switch (grade) {
+
+  case 1 :
+
+  console.log("Pass with Distinction");
+  if (mark>=85) {console.log('A+');}
+  else if (mark>=80) {console.log('A');}
+  else {console.log('A-');}
+  break;
+
+
+  case 2 :
+    
+  console.log("Pass with Merit");
+  if (mark>=70) {console.log('B+');}
+  else if (mark>=65) {console.log('B');}
+  else {console.log('B-');}
+  break;
+
+
+  case 3 :
+
+  console.log("Pass");
+  if (mark>=55) {console.log('C+');}
+  else {console.log('c');}
+  break;
+
+
+  case 4 :
+    
+  console.log(" fail grades");
+  if (mark>=40) {console.log('D');}
+  else   {console.log('E');}
+  break;
+
+  default : 
+  
+  console.log(" please enter number between 0 to 100");
+}
+
+
+
+
+
 
