@@ -1,5 +1,5 @@
 
-// way one
+// the first solution ( using switch statement only)
 const mark1=66;
 switch (mark1) {
     case 100 :
@@ -127,19 +127,20 @@ switch (mark1) {
           console.log(' use numbers from 0 to 100');
       }
 
-// way two
+// the second solution ( using if statement with switch statement)
 
-const mark= -101;
-let grade;
+let mark= 51;
+let result;
 
 if (100<mark) { console.log("unvalid number");}
 else if (0>mark) { console.log("unvalid number");}
-else if (mark>=75) { grade=1;}
-else if (mark>=60) { grade=2;}
-else if (mark>=50) {  grade=3;}
-else { grade=4;}
-
-switch (grade) {
+else if (mark>=75) { result=1;}
+else if (mark>=60) { result=2;}
+else if (mark>=50) {  result=3;}
+else { result=4;}
+// inside if statement we put only one comparision operator and we don't need the another because of the logical order of if statement.
+// for example 95 applies in all if statements but because the condition (mark>=85) is first, 95 will apply in the first if statement.
+switch (result) {
 
   case 1 :
 
@@ -163,7 +164,7 @@ switch (grade) {
 
   console.log("Pass");
   if (mark>=55) {console.log('C+');}
-  else {console.log('c');}
+  else {console.log('C');}
   break;
 
 
